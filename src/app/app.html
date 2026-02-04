@@ -1,13 +1,17 @@
-<h1>{{ message }}</h1>
+<div class="main">
+ <div class="container">
+   <h1>{{ message }}</h1>
 <p>This is my first clean Angular app</p>
 
 
-<h2>Counter</h2>
+<h2>Counter App</h2>
 
-<h1>count : {{count}}</h1>
+<app-counter-display [count]="count"></app-counter-display>
 
-<div class="buttonsContainer">
-  <button (click)="increment()">+</button>
-  <button (click)="decrement()">-</button>
-  <button (click)="reset()">Reset</button>
+<app-counter-controls 
+  (increment)="increment()"
+  (decrement)="decrement()"
+  (reset)="reset()"
+></app-counter-controls>
+ </div>
 </div>

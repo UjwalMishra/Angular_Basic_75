@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
+import { CounterControls } from './components/counter-controls/counter-controls';
+import { CounterDisplay } from './components/counter-display/counter-display';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
+  imports: [CounterControls,CounterDisplay],
   templateUrl: './app.html',
   styleUrls: ['./app.scss']
 })
